@@ -8,4 +8,11 @@ addBtn.addEventListener("click", function () {
   const text = input.value;
 
   if (text === "") return;
+  todos.push({ id: Date.now(), text });
+  input.value = " ";
+  draw();
 });
+
+function draw() {
+  list.innerHTML = "";
+}
