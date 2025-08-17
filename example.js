@@ -15,4 +15,9 @@ addBtn.addEventListener("click", function () {
 
 function draw() {
   list.innerHTML = "";
+  todos.forEach((todo) => {
+    const li = document.createElement("li");
+    li.innerHTML = `${todo.text} <button data-id="${todo.id}">X</button>`;
+    list.appendChild(li);
+  });
 }
