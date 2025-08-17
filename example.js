@@ -21,3 +21,10 @@ function draw() {
     list.appendChild(li);
   });
 }
+list.addEventListener("click", function (e) {
+  if (e.target.tagName === "BUTTON") {
+    const id = Number(e.target.dataset.id);
+    todos = todos.filter((t) => t.id !== id);
+    draw();
+  }
+});
